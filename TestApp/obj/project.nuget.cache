@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "y2Jf18A1yMCNmsm0D82AaRATCadrXVlcgc+sb0or5IXYu6WuTEn7Im7BNOwxo0Ng7dFMuRtBBPhhmY8y/gVQFg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Zia\\source\\repos\\TestApp\\TestApp\\TestApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Zia\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
+  ],
+  "logs": []
+}
