@@ -1,10 +1,10 @@
 pipeline {
-    agent any
-
+    agent { dockerfile true }
     stages {
-        stage ('Print') {
+        stage('Test') {
             steps {
-                echo "Hello Devops Engineers"
+                sh 'node --version'
+                sh 'svn --version'
             }
         }
     }
