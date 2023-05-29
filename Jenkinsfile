@@ -1,11 +1,15 @@
 pipeline {
-    agent { dockerfile true }
+    agent any
     stages {
-        stage('Test') {
-            steps {
-                sh 'node --version'
-                sh 'svn --version'
+        stage('Git Checkout'){
+                    when { expression {  params.action == 'create' } }
+            steps{
+            gitCheckout(
+                branch: "main",
+                url: "https://github.com/ziasix1nine/netCoreApp.git"
+                         )
+                 }
             }
-        }
-    }
+      
+     }
 }
