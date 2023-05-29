@@ -1,15 +1,12 @@
 pipeline {
-    agent any
+    agent {
+        docker { image 'node:18.16.0-alpine' }
+    }
     stages {
-        stage('Git Checkout'){
-                    when { expression {  params.action == 'create' } }
-            steps{
-            gitCheckout(
-                branch: "main",
-                url: "https://github.com/ziasix1nine/netCoreApp.git"
-                         )
-                 }
+        stage('Test') {
+            steps {
+                sh 'node --version'
             }
-      
-     }
+        }
+    }
 }
