@@ -1,13 +1,15 @@
-pipeline {
-   agent any
-    tools{
-        maven 'Maven_3_9_2'
+pipeline
+{
+    agent any
+       tools{
+        maven 'Maven'
     }
-    stages{
-        stage('Build Maven')
-        steps{
-        checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ziasix1nine/netCoreApp.git']]])
+        stages{
+            stage('Build Maven'){
+                steps{
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ziasix1nine/netCoreApp.git']])
                 sh 'mvn clean install'
+                }
+            }
         }
-    }
 }
