@@ -8,7 +8,7 @@ pipeline
             stage('Build Maven'){
                 steps{
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ziasix1nine/netCoreApp.git']])
-                sh 'mvn clean install'
+                bat 'mvn clean install'
                 }
             }
         }
