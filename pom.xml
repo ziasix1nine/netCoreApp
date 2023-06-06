@@ -28,18 +28,11 @@
                     <argLine>-Xmx1024m</argLine>
                     <skipTests>false</skipTests>
                     <testFailureIgnore>true</testFailureIgnore>
-                    <testSourceDirectory>src/test/java</testSourceDirectory>
+                    <testSourceDirectory>src/TestApp</testSourceDirectory>
                     <includes>
-                        <include>**/*Test.java</include>
-                        <include>**/*Tests.java</include>
-                        <include>**/Test*.java</include>
-                        <include>**/Tests*.java</include>
+                        <include>**TestApp/Pages/Index.cshtml</include>
                     </includes>
-                    <excludes>
-                        <exclude>**/Abstract*.java</exclude>
-                        <exclude>**/Abstract*Test.java</exclude>
-                        <exclude>**/*IT.java</exclude>
-                    </excludes>
+
                     <parallel>methods</parallel>
                     <threadCount>10</threadCount>
                 </configuration>
